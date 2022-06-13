@@ -16,10 +16,12 @@ Memory Usage: 13.8 MB, less than 90.68% of Python3 online submissions for Longes
         length_longest_palindrome = 1       
         middle_index = 0
         
+        # Find a palindrome from the center for each letter in the string 
         while length_longest_palindrome < len(s) - 1:
             left_index = middle_index - 1
             right_index = middle_index + 1
             
+            # Expand the middle (Ex. For "baab" "aa" would be the middle in this case)
             while right_index < len(s) and s[middle_index] == s[right_index]:
                 right_index += 1
                 middle_index += 1
@@ -27,10 +29,9 @@ Memory Usage: 13.8 MB, less than 90.68% of Python3 online submissions for Longes
             while left_index > -1 and right_index < len(s) and s[left_index] == s[right_index]:
                 left_index -= 1
                 right_index += 1
-            #print(s[left_index + 1:right_index])
             
             if length_longest_palindrome < right_index - left_index - 1:
-                longest_palindrome = s[left_index + 1:right_index ]
+                longest_palindrome = s[left_index + 1: right_index]
                 length_longest_palindrome = len(longest_palindrome)
 
             middle_index += 1 
