@@ -6,6 +6,7 @@ class Solution:
         index = 0
         longest_substring = ""
         current_substring = ""
+        
         while index < len(s):
             if s[index] in current_substring:
                 if len(current_substring) > len(longest_substring):
@@ -13,8 +14,10 @@ class Solution:
                 current_substring = current_substring[1:]
             else:
                 current_substring += s[index]
-                index +=1
+                index += 1
+        
         if len(current_substring) > len(longest_substring):
                     longest_substring = current_substring
+        
         return len(longest_substring)
             
