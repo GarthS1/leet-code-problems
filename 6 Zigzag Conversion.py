@@ -1,6 +1,6 @@
-https://leetcode.com/problems/zigzag-conversion/
-Runtime: 89 ms, faster than 48.96% of Python3 online submissions for Zigzag Conversion.
-Memory Usage: 13.9 MB, less than 74.92% of Python3 online submissions for Zigzag Conversion.
+#https://leetcode.com/problems/zigzag-conversion/
+#Runtime: 89 ms, faster than 48.96% of Python3 online submissions for Zigzag Conversion.
+#Memory Usage: 13.9 MB, less than 74.92% of Python3 online submissions for Zigzag Conversion.
 
 class Solution:
     def convert(self, s: str, numRows: int) -> str:
